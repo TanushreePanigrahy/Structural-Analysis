@@ -36,12 +36,14 @@ pip install ase pymatgen nglview matplotlib
 
 
 📘 Learning Outcomes
--Understand atomic packing in common crystal structures
--Apply computational tools to perform basic materials analysis
--Practice working with .cif files and unit cell visualization
--Learn scientific computation using open-source Python tools
+
+- Understand atomic packing in common crystal structures
+- Apply computational tools to perform basic materials analysis
+- Practice working with .cif files and unit cell visualization
+- Learn scientific computation using open-source Python tools
 
 📌 Future Improvements
--Add band structure / DOS calculations using DFT codes
--Include thermal expansion and stress analysis
--Create an interactive Streamlit or web interface
+
+- Add band structure / DOS calculations using DFT codes
+- Include thermal expansion and stress analysis
+- Create an interactive Streamlit or web interface
