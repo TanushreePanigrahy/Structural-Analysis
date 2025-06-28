@@ -24,12 +24,12 @@ This project explores and visualizes basic crystal structures (FCC, BCC, HCP) us
 ---
 
 ## 📂 Folder Structure
-├── data/
-│ ├── Al_fcc.cif
-│ ├── Fe_bcc.cif
-│ └── Mg_hcp.cif
-├── structure_analysis.ipynb
-└── README.md
+1. data/
+   - Al_fcc.cif
+   - Fe_bcc.cif
+   - Mg_hcp.cif
+2. structure_analysis.ipynb
+3. README.md
 
 How to run?
 pip install ase pymatgen nglview matplotlib
