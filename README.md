@@ -55,6 +55,10 @@ This project explores and visualizes basic crystal structures (FCC, BCC, HCP) us
     - Computes density and lattice information
 - Returns all this info as a JSON response
 
+  ![2025-06-29](https://github.com/user-attachments/assets/47f33401-f139-4fc8-bc5f-1ad8c7d86fe8)
+  works on http://127.0.0.1:5000/
+
+
 📘 Learning Outcomes
 
 - Understand atomic packing in common crystal structures
