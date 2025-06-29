@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Structural Analysis Tool</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    select, button { padding: 10px; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h2>Analyze Material Structure (from CIF)</h2>
+
+  <label for="element">Choose Element:</label>
+  <select id="element">
+    <option value="Al">Aluminium (Al)</option>
+    <option value="Fe">Iron (Fe)</option>
+    <option value="Mg">Magnesium (Mg)</option>
+  </select><br>
+
+  <button onclick="sendRequest()">Analyze</button>
+
+  <h3>Result:</h3>
+  <div id="result">--</div>
+
+  <script>
+    async function sendRequest() {
+      const element = document.getElementById("element").value;
+      const res = await fetch('/analyze', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ element })
+      });
+      const data = await res.json();
+      document.getElementById("result").innerHTML = `
+        <p><b>Element:</b> ${data.symbol}</p>
+        <p><b>Coordination Number:</b> ${data.coordination}</p>
+        <p><b>Nearest Neighbor Distances (Å):</b> ${data.distances.join(', ')}</p>
+        <p><b>Lattice System:</b> ${data.lattice}</p>
+        <p><b>Density (g/cm³):</b> ${data.density}</p>
+      `;
+    }
+  </script>
+</body>
+</html>
