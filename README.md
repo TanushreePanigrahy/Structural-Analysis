@@ -24,16 +24,36 @@ This project explores and visualizes basic crystal structures (FCC, BCC, HCP) us
 ---
 
 ## 📂 Folder Structure
-1. data/
+1. cif/
    - Al_fcc.cif
    - Fe_bcc.cif
    - Mg_hcp.cif
-2. structure_analysis.ipynb
-3. README.md
+2. templates/
+   - index.html
+4. structure_analysis.ipynb
+5. app.py
+6. README.md
 
-How to run?
-pip install ase pymatgen nglview matplotlib
+## 🔧 How it Works
 
+### `index.html`
+
+- Located in the `templates/` folder
+- Provides a simple UI where the user can:
+  - Select a material from a dropdown (Al, Fe, Mg)
+  - Click **Analyze**
+- Sends a POST request to `/analyze` using JavaScript
+- Displays the returned structural data dynamically on the same page
+
+### `app.py`
+
+- A Flask web server with two routes:
+  - `/` — Renders the HTML page
+  - `/analyze` — Accepts a material name (e.g., "Al"), loads the corresponding `.cif` file, and:
+    - Uses `pymatgen` to parse the structure
+    - Uses `CrystalNN` to determine coordination number and nearest neighbors
+    - Computes density and lattice information
+- Returns all this info as a JSON response
 
 📘 Learning Outcomes
 
