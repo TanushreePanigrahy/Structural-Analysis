@@ -2,7 +2,6 @@
 
 This project explores and visualizes basic crystal structures (FCC, BCC, HCP) using Python-based computational tools. It performs analysis on lattice parameters, coordination numbers, and theoretical densities using both built-in functions and real crystallographic data.
 
----
 
 ## 🚀 Features
 
@@ -11,8 +10,7 @@ This project explores and visualizes basic crystal structures (FCC, BCC, HCP) us
 - 🔍 Calculate theoretical densities using physical principles
 - 🧪 Determine coordination number using `pymatgen`
 - 🌐 Interactive 3D visualization of atomic structures using `nglview`
-
----
+- 
 
 ## 🛠️ Tech Stack
 
@@ -21,7 +19,6 @@ This project explores and visualizes basic crystal structures (FCC, BCC, HCP) us
 - [nglview](http://nglviewer.org/nglview/) – 3D atomic structure viewer
 - Jupyter Notebook / VS Code
 
----
 
 ## 📂 Folder Structure
 1. cif/
